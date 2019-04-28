@@ -8,13 +8,14 @@ public class Door : MonoBehaviour
     [SerializeField] RoomEntrances location;
     bool isClosed = true;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Player") && isClosed)
+        if (collision.gameObject.CompareTag("Player") && isClosed)
         {
             isClosed = false;
             Vector2 whereToSpawn = new Vector2(transform.position.x + openX, transform.position.y + openY);
-            GameObject.FindObjectOfType<GameController>().GenerateRoom(whereToSpawn, location);
+            FindObjectOfType<GameController>().GenerateRoom(whereToSpawn, location);
+            Destroy(gameObject);
         }
     }
 }
