@@ -119,6 +119,10 @@ public class PlayerController : MonoBehaviour
         {
             GetComponent<RangedAtk>().DoAction();
         }
+        else if (Input.GetButton("AttackSkl"))
+        {
+            GetComponent<AttackSkl>().DoAction();
+        }
     }
 
     public HorizontalDirection GetHorizontalLook() { return horizontalLook; }
