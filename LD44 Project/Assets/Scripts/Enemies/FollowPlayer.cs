@@ -7,6 +7,7 @@ public class FollowPlayer : MonoBehaviour
     [SerializeField] float movementSpeed;
 
     GameObject target;
+    bool follow = true;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, movementSpeed * Time.deltaTime);
+        if(target)
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, movementSpeed * Time.deltaTime);
     }
 }

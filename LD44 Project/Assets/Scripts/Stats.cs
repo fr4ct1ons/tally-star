@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
-    [SerializeField] int health;
+    [SerializeField] protected int health;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class Stats : MonoBehaviour
         
     }
 
-    public void DealDamage(int dmg) {
+    public virtual void DealDamage(int dmg) {
         health -= dmg;
         if(health <= 0)
         {

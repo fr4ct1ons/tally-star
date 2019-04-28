@@ -15,7 +15,8 @@ public class CameraFollower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bufferVector.Set(player.transform.position.x, player.transform.position.y, -10);
+        if(player)
+            bufferVector.Set(player.transform.position.x, player.transform.position.y, -10);
         transform.position = bufferVector;
     }
 }
