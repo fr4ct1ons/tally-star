@@ -11,13 +11,15 @@ public class PlayerController : MonoBehaviour
 
     // Cache variables
     Vector2 bufferVector;
-    HorizontalDirection horizontalLook;
-    VerticalDirection verticalLook;
+    HorizontalDirection horizontalLook = HorizontalDirection.MID;
+    VerticalDirection verticalLook = VerticalDirection.SOUTH;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         //bufferVector.Set(transform.position.x, transform.position.y);
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -49,7 +51,7 @@ public class PlayerController : MonoBehaviour
             bufferVector.Set(bufferVector.x, transform.position.y - 1);
         }
 
-
+        
 
         if(Input.GetAxisRaw("Vertical") > 0.1f && Input.GetAxisRaw("Horizontal") > 0.1f)
         {
@@ -92,9 +94,13 @@ public class PlayerController : MonoBehaviour
             verticalLook = VerticalDirection.MID;
         }
 
+        if(animator.GetInteger("verticalLook") != (int)verticalLook && animator.GetInteger("horizontalLook") != (int)horizontalLook)
+        if (animator.GetInteger("verticalLook") != (int)verticalLook)
+            animator.SetInteger("verticalLook", (int)verticalLook);
+        if(animator.GetInteger("horizontalLook") != (int)horizontalLook)
+            animator.SetInteger("horizontalLook", (int)horizontalLook);
+
         transform.position = Vector2.MoveTowards(transform.position, bufferVector, Time.deltaTime * movementSpeed);
-        print("Input2: " + horizontalLook);
-        print("Input2: " + verticalLook);
     }
 
 
