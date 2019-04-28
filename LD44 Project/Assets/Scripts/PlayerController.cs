@@ -94,10 +94,15 @@ public class PlayerController : MonoBehaviour
             verticalLook = VerticalDirection.MID;
         }
 
-        if(animator.GetInteger("verticalLook") != (int)verticalLook && animator.GetInteger("horizontalLook") != (int)horizontalLook)
-        if (animator.GetInteger("verticalLook") != (int)verticalLook)
+        
+        if(animator.GetInteger("verticalLook") != (int)verticalLook || animator.GetInteger("horizontalLook") != (int)horizontalLook)
+        {
+            animator.SetTrigger("goToStart");
+        }
+        
+        //if (animator.GetInteger("verticalLook") != (int)verticalLook)
             animator.SetInteger("verticalLook", (int)verticalLook);
-        if(animator.GetInteger("horizontalLook") != (int)horizontalLook)
+        //if(animator.GetInteger("horizontalLook") != (int)horizontalLook)
             animator.SetInteger("horizontalLook", (int)horizontalLook);
 
         transform.position = Vector2.MoveTowards(transform.position, bufferVector, Time.deltaTime * movementSpeed);
