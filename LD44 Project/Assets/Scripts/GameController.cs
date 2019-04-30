@@ -44,7 +44,6 @@ public class GameController : MonoBehaviour
         GameObject newRoom = Instantiate(rooms[roomToSpawn], whereToSpawn, Quaternion.identity);
         Vector2 bufferVector = transform.position;
         newRoom.GetComponent<Room>().SetPosition(entranceDoor);
-        
-        
+
     }
 }

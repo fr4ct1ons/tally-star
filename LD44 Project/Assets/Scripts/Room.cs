@@ -11,13 +11,18 @@ public class Room : MonoBehaviour
 
     Vector2 bufferVector;
 
-    private void Start()
+    private void Awake()
     {
         for (int i = 0; i < 4; i++)
         {
             if (doors[i])
                 distances[i] = Vector2.Distance(transform.position, doors[i].transform.position);
         }
+    }
+
+    private void Start()
+    {
+
     }
 
     public GameObject GetRoom(RoomEntrances whichRoom)

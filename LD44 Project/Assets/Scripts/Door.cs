@@ -4,9 +4,28 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField] float openX, openY;
+    float openX = 0, openY = 0;
     [SerializeField] RoomEntrances location;
     bool isClosed = true;
+
+    private void Awake()
+    {
+        switch (location)
+        {
+            case RoomEntrances.NORTH:
+                openY = 1;
+                break;
+            case RoomEntrances.SOUTH:
+                openY = -1;
+                break;
+            case RoomEntrances.EAST:
+                openX = 1;
+                break;
+            case RoomEntrances.WEST:
+                openX = -1;
+                break;
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
