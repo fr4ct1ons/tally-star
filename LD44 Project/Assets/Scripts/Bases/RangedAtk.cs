@@ -25,6 +25,9 @@ public class RangedAtk : BaseAct
         Debug.Log("Base ranged attack");
         float x = (float)GetComponent<PlayerController>().GetHorizontalLook();
         float y = (float)GetComponent<PlayerController>().GetVerticalLook();
-        Instantiate(projectileToShoot, transform.position, Quaternion.identity).GetComponent<Projectile>().SetDirection(x, y);
+        GameObject newProjectile = Instantiate(projectileToShoot, transform.position, Quaternion.identity);
+        newProjectile.GetComponent<Projectile>().SetDirection(x, y);
+        newProjectile.tag = "Player";
+        newProjectile.layer =  10;
     }
 }
