@@ -27,7 +27,11 @@ public class AttackSkl : BaseAct
         {
             float x = (float)GetComponent<PlayerController>().GetHorizontalLook();
             float y = (float)GetComponent<PlayerController>().GetVerticalLook();
-            Instantiate(projectileToCast, transform.position, Quaternion.identity).GetComponent<Projectile>().SetDirection(x, y);
+            GameObject newProjectile = Instantiate(projectileToCast, transform.position, Quaternion.identity);
+            newProjectile.GetComponent<Projectile>().SetDirection(x, y);
+            newProjectile.tag = "Player";
+            newProjectile.layer = 10;
+
             countdown = cooldown;
         }
     }

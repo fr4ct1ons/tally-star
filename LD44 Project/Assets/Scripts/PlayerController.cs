@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     // Fields that vary from character to character
     [SerializeField] float movementSpeed;
     [SerializeField] GameObject meleeCollider;
+    [SerializeField] float deadZone = 0.2f;
 
     // Cache variables
     Vector2 bufferVector;
@@ -33,20 +34,20 @@ public class PlayerController : MonoBehaviour
     {
         bufferVector.Set(transform.position.x, transform.position.y);
 
-        if (Input.GetAxisRaw("Horizontal") > 0.1f)
+        if (Input.GetAxis("Horizontal") > deadZone)
         {
             bufferVector.Set(transform.position.x + 1, bufferVector.y);
         }
-        else if (Input.GetAxisRaw("Horizontal") < -0.1f)
+        else if (Input.GetAxis("Horizontal") < -deadZone)
         {
             bufferVector.Set(transform.position.x - 1, bufferVector.y);
         }
 
-        if (Input.GetAxisRaw("Vertical") > 0.1f)
+        if (Input.GetAxis("Vertical") > deadZone)
         {
             bufferVector.Set(bufferVector.x, transform.position.y + 1);
         }
-        else if (Input.GetAxisRaw("Vertical") < -0.1f)
+        else if (Input.GetAxis("Vertical") < -deadZone)
         {
             bufferVector.Set(bufferVector.x, transform.position.y - 1);
         }
