@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
 
     [SerializeField] protected float speed;
     [SerializeField] protected int damage;
+    [SerializeField] float countdown = 9999999f;
 
     protected Vector2 bufferVector;
     protected float dirX, dirY;
@@ -22,6 +23,9 @@ public class Projectile : MonoBehaviour
     {
         bufferVector.Set(transform.position.x + dirX, transform.position.y + dirY);
         transform.position = Vector2.MoveTowards(transform.position, bufferVector, speed * Time.deltaTime);
+        countdown -= Time.deltaTime;
+        if (countdown <= 0)
+            Destroy(gameObject);
     }
 
     public void SetDirection(float x, float y)
