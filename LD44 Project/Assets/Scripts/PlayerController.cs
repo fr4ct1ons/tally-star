@@ -34,20 +34,20 @@ public class PlayerController : MonoBehaviour
     {
         bufferVector.Set(transform.position.x, transform.position.y);
 
-        if (Input.GetAxis("Horizontal") > deadZone)
+        if (Input.GetAxisRaw("Horizontal") > deadZone)
         {
             bufferVector.Set(transform.position.x + 1, bufferVector.y);
         }
-        else if (Input.GetAxis("Horizontal") < -deadZone)
+        else if (Input.GetAxisRaw("Horizontal") < -deadZone)
         {
             bufferVector.Set(transform.position.x - 1, bufferVector.y);
         }
 
-        if (Input.GetAxis("Vertical") > deadZone)
+        if (Input.GetAxisRaw("Vertical") > deadZone)
         {
             bufferVector.Set(bufferVector.x, transform.position.y + 1);
         }
-        else if (Input.GetAxis("Vertical") < -deadZone)
+        else if (Input.GetAxisRaw("Vertical") < -deadZone)
         {
             bufferVector.Set(bufferVector.x, transform.position.y - 1);
         }
