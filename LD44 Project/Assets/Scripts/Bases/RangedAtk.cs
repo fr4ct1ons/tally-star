@@ -5,7 +5,9 @@ using UnityEngine;
 public class RangedAtk : BaseAct
 {
     [SerializeField] GameObject projectileToShoot;
-    
+
+    float countdown = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +17,8 @@ public class RangedAtk : BaseAct
     // Update is called once per frame
     void Update()
     {
-        
+        if (countdown > 0)
+            countdown -= Time.deltaTime;
     }
 
     
@@ -29,5 +32,7 @@ public class RangedAtk : BaseAct
         newProjectile.GetComponent<Projectile>().SetDirection(x, y);
         newProjectile.tag = "Player";
         newProjectile.layer =  10;
+
+        countdown = cooldown;
     }
 }
