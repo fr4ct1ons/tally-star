@@ -25,6 +25,15 @@ public class Room : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Debug.Log("Closing");
+            Application.Quit();
+        }
+    }
+
     public GameObject GetRoom(RoomEntrances whichRoom)
     {
         return doors[(int)whichRoom];

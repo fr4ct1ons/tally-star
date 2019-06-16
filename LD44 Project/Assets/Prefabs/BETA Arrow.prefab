@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   damage: 12
-  countdown: 9999999
+  countdown: 2
 --- !u!58 &-5394059269215814493
 CircleCollider2D:
   m_ObjectHideFlags: 0
