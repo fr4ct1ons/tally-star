@@ -7,14 +7,15 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] GameObject room;
     [SerializeField] ScriptableWave wave;
 
-    Vector2 topR, bottomL, bufferVector;
+    Vector3 topR, bottomL, bufferVector;
     bool canSpawn = true;
     int waveIndex = 0, enemyCount = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        topR = GameObject.FindGameObjectWithTag("TopRight").gameObject.transform.position;
+        bottomL = GameObject.FindGameObjectWithTag("BottomLeft").gameObject.transform.position;
     }
 
     // Update is called once per frame
@@ -35,7 +36,8 @@ public class EnemySpawner : MonoBehaviour
             Destroy(gameObject);
         }
         canSpawn = false;
-        Instantiate(wave.GetEnemy(waveIndex));
+        bufferVector.Set(Random.Range(bottomL.x, topR.x), Random.Range(bottomL.y, topR.y), 0);
+        Instantiate(wave.GetEnemy(waveIndex), bufferVector, Quaternion.identity);
         enemyCount++;
         yield return new WaitForSeconds(wave.GetSpawnInterval(waveIndex));
         

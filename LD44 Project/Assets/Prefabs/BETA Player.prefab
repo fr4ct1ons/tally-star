@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1186fcc6ccef5a458fd7114262e2171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
+  movementSpeed: 3.5
   meleeCollider: {fileID: 0}
   deadZone: 0.2
 --- !u!114 &3456606672438542252
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  cooldown: 0
+  cooldown: 1
   projectileToShoot: {fileID: 4028921424739963201, guid: 0fd721438dd4acb47bc4dc75c54ad3b2,
     type: 3}
 --- !u!95 &3456606672438542253
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   cooldown: 5
-  projectileToCast: {fileID: 926476528699510752, guid: 7f2457e83458ac842979db4a1a5503d9,
+  projectileToCast: {fileID: 7894508086634676933, guid: 7d937a9d5bbdf6045b874ec898409b4d,
     type: 3}
 --- !u!50 &346663931
 Rigidbody2D:

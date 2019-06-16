@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  damage: 30
+  damage: 25
   countdown: 999999
 --- !u!50 &-8800843055764301791
 Rigidbody2D:

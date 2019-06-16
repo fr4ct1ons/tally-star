@@ -25,14 +25,16 @@ public class RangedAtk : BaseAct
 
     public override void DoAction()
     {
-        Debug.Log("Base ranged attack");
-        float x = (float)GetComponent<PlayerController>().GetHorizontalLook();
-        float y = (float)GetComponent<PlayerController>().GetVerticalLook();
-        GameObject newProjectile = Instantiate(projectileToShoot, transform.position, Quaternion.identity);
-        newProjectile.GetComponent<Projectile>().SetDirection(x, y);
-        newProjectile.tag = "Player";
-        newProjectile.layer =  10;
-
-        countdown = cooldown;
+        if (countdown <= 0)
+        {
+            Debug.Log("Base ranged attack");
+            float x = (float)GetComponent<PlayerController>().GetHorizontalLook();
+            float y = (float)GetComponent<PlayerController>().GetVerticalLook();
+            GameObject newProjectile = Instantiate(projectileToShoot, transform.position, Quaternion.identity);
+            newProjectile.GetComponent<Projectile>().SetDirection(x, y);
+            newProjectile.tag = "Player";
+            newProjectile.layer = 10;
+            countdown = cooldown;
+        }
     }
 }

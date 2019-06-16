@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesToSpawn:
   - {fileID: 2050818970539245555, guid: 83985f82eef0e0e48aa28af2830cb298, type: 3}
-  - {fileID: 2002211882855974381, guid: a8b327a0ca61e0f45843781e81f86955, type: 3}
+  - {fileID: 3676210882597985461, guid: 72fba25b718590e43b8e86e949cf2993, type: 3}
   - {fileID: 2050818970539245555, guid: 83985f82eef0e0e48aa28af2830cb298, type: 3}
-  - {fileID: 2002211882855974381, guid: a8b327a0ca61e0f45843781e81f86955, type: 3}
-  amountToSpawn: 02000000040000000100000003000000
+  - {fileID: 5752395541535380365, guid: d32d78fab9d1ca641a27a9c20653c9d2, type: 3}
+  - {fileID: 3131349721748110014, guid: 214ad14cdc7129f46b60541f5f81839e, type: 3}
+  amountToSpawn: 0200000004000000030000000200000004000000
   timeBetweenSpawn:
-  - 1
-  - 2
-  - 1.5
+  - 5
+  - 3
   - 2.5
+  - 8
+  - 3
