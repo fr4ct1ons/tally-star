@@ -15,7 +15,11 @@ MonoBehaviour:
   enemiesToSpawn:
   - {fileID: 2050818970539245555, guid: 83985f82eef0e0e48aa28af2830cb298, type: 3}
   - {fileID: 2002211882855974381, guid: a8b327a0ca61e0f45843781e81f86955, type: 3}
-  amountToSpawn: 0200000003000000
+  - {fileID: 2050818970539245555, guid: 83985f82eef0e0e48aa28af2830cb298, type: 3}
+  - {fileID: 2002211882855974381, guid: a8b327a0ca61e0f45843781e81f86955, type: 3}
+  amountToSpawn: 02000000040000000100000003000000
   timeBetweenSpawn:
   - 1
+  - 2
   - 1.5
+  - 2.5
