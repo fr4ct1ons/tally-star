@@ -15,8 +15,8 @@ public class PlayerJumper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        topR = myRoom.GetComponent<Room>().GetTopR();
-        bottomL = myRoom.GetComponent<Room>().GetBottomL();
+        topR = GameObject.FindGameObjectWithTag("TopRight").gameObject.transform.position;
+        bottomL = GameObject.FindGameObjectWithTag("BottomLeft").gameObject.transform.position;
     }
 
     // Update is called once per frame

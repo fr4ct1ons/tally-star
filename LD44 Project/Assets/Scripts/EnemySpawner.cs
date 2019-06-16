@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
 
     Vector2 topR, bottomL, bufferVector;
     bool canSpawn = true;
-    int waveIndex = 0, enemyCount = 0;
+    int waveIndex = 0, enemyCount = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -28,10 +28,10 @@ public class EnemySpawner : MonoBehaviour
     {
         if (waveIndex > wave.GetEnemiesToSpawn() - 1)
         {
-            Debug.Log("Deleting!");
-            Debug.Log("Deletion Number of enemies to spawn: " + wave.GetEnemiesToSpawn());
-            Debug.Log("Deletion Wave index: " + waveIndex);
-            Debug.Log("Deletion Enemy count: " + enemyCount);
+            //Debug.Log("Deleting!");
+            //Debug.Log("Deletion Number of enemies to spawn: " + wave.GetEnemiesToSpawn());
+            //Debug.Log("Deletion Wave index: " + waveIndex);
+            //Debug.Log("Deletion Enemy count: " + enemyCount);
             Destroy(gameObject);
         }
         canSpawn = false;
@@ -45,9 +45,9 @@ public class EnemySpawner : MonoBehaviour
             enemyCount = 1;
         }
 
-        Debug.Log("Number of enemies to spawn: " + wave.GetEnemiesToSpawn());
-        Debug.Log("Wave index: " + waveIndex);
-        Debug.Log("Enemy count: " + enemyCount);
+        //Debug.Log("Number of enemies to spawn: " + wave.GetEnemiesToSpawn());
+        //Debug.Log("Wave index: " + waveIndex);
+        //Debug.Log("Enemy count: " + enemyCount);
 
         canSpawn = true;
     }
