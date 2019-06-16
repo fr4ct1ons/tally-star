@@ -68,7 +68,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 7
-  m_Sprite: {fileID: 21300000, guid: df8df2d5b84b0d541b5581cec2028946, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 582b60aa09aed084d9de9aaf68c1d08e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,6 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 3
   meleeCollider: {fileID: 0}
+  deadZone: 0.2
 --- !u!114 &3456606672438542252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,7 +208,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3456606672438542248}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -219,7 +220,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &346663930
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -230,11 +231,11 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.6, y: 1.8}
+  m_Offset: {x: 0.3, y: 0}
+  m_Size: {x: 0.8, y: 2.4}
   m_Direction: 0
 --- !u!114 &346663929
 MonoBehaviour:
