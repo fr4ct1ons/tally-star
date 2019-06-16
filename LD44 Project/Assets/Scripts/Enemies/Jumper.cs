@@ -26,7 +26,7 @@ public class Jumper : MonoBehaviour
         {
             canJump = false;
             bufferVector.Set(UnityEngine.Random.Range(bottomL.x, topR.x), UnityEngine.Random.Range(bottomL.y, topR.y), 0);
-            Debug.Log(bufferVector);
+            //Debug.Log(bufferVector);
         }
         else if (transform.position == bufferVector && dontCount)
         {

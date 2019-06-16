@@ -27,7 +27,7 @@ public class PlayerJumper : MonoBehaviour
             canJump = false;
             if(FindObjectOfType<PlayerController>())
             bufferVector = FindObjectOfType<PlayerController>().gameObject.transform.position;
-            Debug.Log(bufferVector);
+            //Debug.Log(bufferVector);
         }
         else if (transform.position == bufferVector && dontCount)
         {

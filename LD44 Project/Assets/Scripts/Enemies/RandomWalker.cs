@@ -28,7 +28,7 @@ public class RandomWalker : MonoBehaviour
             StartCoroutine(WalkAround());
         }
 
-        Debug.Log(bufferVector);
+        //Debug.Log(bufferVector);
         transform.position = Vector3.MoveTowards(transform.position, bufferVector, speed * Time.deltaTime);
     }
 
@@ -36,7 +36,7 @@ public class RandomWalker : MonoBehaviour
     {
         canWalk = false;
         bufferVector.Set(UnityEngine.Random.Range(bottomL.x, topR.x), UnityEngine.Random.Range(bottomL.y, topR.y), 0);
-        Debug.Log("Enter cooldown");
+        //Debug.Log("Enter cooldown");
         yield return new WaitForSeconds(timeBetweenJumps);
         canWalk = true;
     }
