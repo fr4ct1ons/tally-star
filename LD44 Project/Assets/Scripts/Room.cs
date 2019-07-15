@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Room component used for procedural generation of the game's rooms. Not used in the current version.
+/// </summary>
 public class Room : MonoBehaviour
 {
     [Tooltip("Respectively: North, South, East, West")]

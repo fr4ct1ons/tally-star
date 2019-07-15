@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Player controller component. Used for getting player input.
+/// </summary>
 public class PlayerController : MonoBehaviour
 {
     // Fields that vary from character to character
@@ -16,10 +19,8 @@ public class PlayerController : MonoBehaviour
     VerticalDirection verticalLook = VerticalDirection.SOUTH;
     Animator animator;
 
-    // Start is called before the first frame update
     void Start()
     {
-        //bufferVector.Set(transform.position.x, transform.position.y);
         animator = GetComponent<Animator>();
     }
 
@@ -30,9 +31,14 @@ public class PlayerController : MonoBehaviour
         GetAttackInput();
     }
 
+    /// <summary>
+    ///Void method Used for getting movement input.
+    /// </summary>
     private void GetMovementInput()
     {
         bufferVector.Set(transform.position.x, transform.position.y);
+
+        // Set movement variable
 
         if (Input.GetAxisRaw("Horizontal") > deadZone)
         {
@@ -52,7 +58,7 @@ public class PlayerController : MonoBehaviour
             bufferVector.Set(bufferVector.x, transform.position.y - 1);
         }
 
-        
+        // Set animator direction variable
 
         if(Input.GetAxisRaw("Vertical") > 0.1f && Input.GetAxisRaw("Horizontal") > 0.1f)
         {
@@ -73,7 +79,7 @@ public class PlayerController : MonoBehaviour
         {
             horizontalLook = HorizontalDirection.WEST;
             verticalLook = VerticalDirection.SOUTH;
-        }// FIM DIAGONAIS
+        }// END DIAGONALS
         else if (Input.GetAxisRaw("Vertical") == 0.0f && Input.GetAxisRaw("Horizontal") < -0.1f)
         {
             horizontalLook = HorizontalDirection.WEST;
@@ -109,7 +115,9 @@ public class PlayerController : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, bufferVector, Time.deltaTime * movementSpeed);
     }
 
-
+    /// <summary>
+    /// Void method used for getting attack input.
+    /// </summary>
     private void GetAttackInput()
     {
         if (Input.GetButton("MeleeAtk"))
