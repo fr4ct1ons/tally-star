@@ -7,7 +7,7 @@ Author: Gabriel "fr4t1ons" Lucena
 In this "wave fighter" game, you must fight various enemy waves in order to progress in the game. As of July 15 of 2019, this game is in a very early state of development, on the Unity Engine 2019.1.0.
 
 ## License
-Since this is the very first game I'm actually releasing to the public, I want to show what my skills are when it comes to game development. For this reason, Tally Star will be distributed in the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/). This means you can modify the code for non-commercial purposes only, you must credit me on your derived work, which also must be made under these same terms. If you want to use something in this project without these terms (for example: if you want to sell my entire project and retain the profits), please contact me and we may work this out.
+Since this is the very first game I'm actually releasing to the public, I want to show what my skills are when it comes to game development. For this reason, Tally Star will be distributed in the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/). This means you can modify the code for non-commercial purposes only and if you do you must credit me on your derived work when distributing it, which also must be done under these same terms. If you want to use something in this project without these terms (for example: if you want to sell my entire project and retain the profits), please contact me and we may work this out.
 
 ## Contact
 You can contact me at https://twitter.com/fr4ct1ons or at https://github.com/lucena-fr4ct1ons.
