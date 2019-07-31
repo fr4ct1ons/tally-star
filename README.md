@@ -1,7 +1,7 @@
 # tally-star
 Tally Star is a game I started working on for Ludum Dare 44 and later reciclated for EpoJam 2019, a game jam organized by a local group of game devs in town.
 
-Author: Gabriel "fr4t1ons" Lucena
+Author: Gabriel "fr4t1ons" Lucena - https://fr4ct1ons.myportfolio.com/
 
 ## Summary
 In this "wave fighter" game, you must fight various enemy waves in order to progress in the game. As of July 15 of 2019, this game is in a very early state of development, on the Unity Engine 2019.1.8f1.
